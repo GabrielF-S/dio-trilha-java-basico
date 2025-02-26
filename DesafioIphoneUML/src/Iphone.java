@@ -1,7 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Iphone implements AparelhoTelefonico, NavegadorInternet, ReprodutorMusica {
     
     private boolean estaReproduzindo;
     private String musicaAtual = "";
+    private String siteAtual = "";
+    private List sitesAbertos = new ArrayList<>();
 
     @Override
     public void toca() {
@@ -17,7 +22,7 @@ public class Iphone implements AparelhoTelefonico, NavegadorInternet, Reprodutor
     @Override
     public void pausar() {
         if (estaReproduzindo) {
-            System.out.println("Musica pausada");
+            System.out.println("Musica" + musicaAtual + " pausada");
             estaReproduzindo = false;
         } else {
             System.out.println("Não há músicas sendo reproduzida");
@@ -30,8 +35,7 @@ public class Iphone implements AparelhoTelefonico, NavegadorInternet, Reprodutor
         
         System.out.println("Musica: " + musica + " selecionada");
         musicaAtual = musica;
-        toca();
-    }
+       }
 
     @Override
     public void ligar(String numero) {
@@ -52,19 +56,32 @@ public class Iphone implements AparelhoTelefonico, NavegadorInternet, Reprodutor
 
     @Override
     public void exibirPagina(String url) {
+        siteAtual = url;
         System.out.println("Acessando pagina: "+ url);
        
     }
 
     @Override
     public void adicionarNovaAba() {
-        System.out.println("Abrindo nova guia");
+        if (siteAtual.isBlank()) {
+            System.out.println("Abra uma pagina");
+        }else{
+            sitesAbertos.add(siteAtual);
+            siteAtual = "";
+            System.out.println("Abrindo nova guia");
+        }
+        
       
     }
 
     @Override
     public void atualizarPagina() {
-        System.out.println("Pagina atualizada");
+        if (siteAtual.isBlank()) {
+            System.out.println("Abra uma pagina");
+        } else {
+            System.out.println("Pagina "+ siteAtual+ " atualizada");
+        }
+        
         
     }
     

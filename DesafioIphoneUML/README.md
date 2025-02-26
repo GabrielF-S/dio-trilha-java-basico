@@ -46,4 +46,3 @@ classDiagram
     class iPhone {
         
     }
-
