@@ -24,19 +24,19 @@ Minutos relevantes: 00:15 até 00:55.
 
 ```mermaid
 classDiagram
-    interface  ReprodutorMusical {
+    interface ReprodutorMusical {
         +tocar()
         +pausar()
         +selecionarMusica(musica: String)
     }
 
-    interface  AparelhoTelefonico {
+    interface AparelhoTelefonico {
         +ligar(numero: String)
         +atender()
         +iniciarCorreioVoz()
     }
 
-    interface  NavegadorInternet {
+    interface NavegadorInternet {
         +exibirPagina(url: String)
         +adicionarNovaAba()
         +atualizarPagina()
