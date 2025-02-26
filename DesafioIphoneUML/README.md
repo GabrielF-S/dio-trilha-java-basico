@@ -24,36 +24,30 @@ Minutos relevantes: 00:15 até 00:55.
 
 ```mermaid
 classDiagram
-    interface ReprodutorMusical {
+    class ReprodutorMusical {
         +tocar()
         +pausar()
         +selecionarMusica(musica: String)
     }
 
-    interface AparelhoTelefonico {
+    class AparelhoTelefonico {
         +ligar(numero: String)
         +atender()
         +iniciarCorreioVoz()
     }
 
-    interface NavegadorInternet {
+    class NavegadorInternet {
         +exibirPagina(url: String)
         +adicionarNovaAba()
         +atualizarPagina()
     }
 
     class iPhone {
-        +tocar()
-        +pausar()
-        +selecionarMusica(musica: String)
-        +ligar(numero: String)
-        +atender()
-        +iniciarCorreioVoz()
-        +exibirPagina(url: String)
-        +adicionarNovaAba()
-        +atualizarPagina()
+        +reprodutorMusical: ReprodutorMusical
+        +aparelhoTelefonico: AparelhoTelefonico
+        +navegadorInternet: NavegadorInternet
     }
 
-    iPhone ..|> ReprodutorMusical
-    iPhone ..|> AparelhoTelefonico
-    iPhone ..|> NavegadorInternet
+    iPhone --> ReprodutorMusical
+    iPhone --> AparelhoTelefonico
+    iPhone --> NavegadorInternet
