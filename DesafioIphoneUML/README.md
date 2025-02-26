@@ -36,7 +36,7 @@ classDiagram
         +iniciarCorreioVoz()
     }
 
-    class NavegadorInternet {
+    interface NavegadorInternet {
         +exibirPagina(url: String)
         +adicionarNovaAba()
         +atualizarPagina()
