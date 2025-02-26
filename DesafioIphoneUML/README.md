@@ -30,15 +30,15 @@ classDiagram
     ReprodutorMusical <|--iPhone
     ReprodutorMusical: +tocar()
     ReprodutorMusical: +pausar()
-    ReprodutorMusical: +selecionarMusica(musica: String)
+    ReprodutorMusical: +selecionarMusica(musica)
 
     AparelhoTelefonico <|--iPhone
-    AparelhoTelefonico: +ligar(numero: String)
+    AparelhoTelefonico: +ligar(numero)
     AparelhoTelefonico: +atender()
     AparelhoTelefonico: +iniciarCorreioVoz()
     
     NavegadorInternet <|--iPhone
-    NavegadorInternet: +exibirPagina(url: String)
+    NavegadorInternet: +exibirPagina(url)
     NavegadorInternet:+adicionarNovaAba()
     NavegadorInternet: +atualizarPagina()
   
