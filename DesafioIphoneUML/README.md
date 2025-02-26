@@ -23,29 +23,27 @@ Minutos relevantes: 00:15 até 00:55.
 ## Diagrama UML do iPhone
 
 ```mermaid
+---
+title: Iphone
+---
 classDiagram
-    class ReprodutorMusical {
-        +tocar()
-        +pausar()
-        +selecionarMusica(musica: String)
-    }
+    ReprodutorMusical <|--iPhone
+    ReprodutorMusical: +tocar()
+    ReprodutorMusical: +pausar()
+    ReprodutorMusical: +selecionarMusica(musica: String)
 
-    class AparelhoTelefonico {
-        +ligar(numero: String)
-        +atender()
-        +iniciarCorreioVoz()
-    }
-
-    class NavegadorInternet {
-        +exibirPagina(url: String)
-        +adicionarNovaAba()
-        +atualizarPagina()
-    }
+    AparelhoTelefonico <|--iPhone
+    AparelhoTelefonico: +ligar(numero: String)
+    AparelhoTelefonico: +atender()
+    AparelhoTelefonico: +iniciarCorreioVoz()
+    
+    NavegadorInternet <|--iPhone
+    NavegadorInternet: +exibirPagina(url: String)
+    NavegadorInternet:+adicionarNovaAba()
+    NavegadorInternet: +atualizarPagina()
+  
 
     class iPhone {
         
     }
 
-    iPhone --|> ReprodutorMusical
-    iPhone --|> AparelhoTelefonico
-    iPhone --|> NavegadorInternet
