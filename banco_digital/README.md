@@ -43,12 +43,7 @@ classDiagram
        #Cliente cliente
     }
 
-    class ContaCorrente {
-       
-    }
-    class ContaPoupanca {
-       
-    }
+    
     contaCorrente --> Conta
     contaPoupanca --> Conta
 
