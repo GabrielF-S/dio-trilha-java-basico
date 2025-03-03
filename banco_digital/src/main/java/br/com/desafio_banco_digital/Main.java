@@ -1,9 +1,12 @@
 package br.com.desafio_banco_digital;
 
-import br.com.desafio_banco_digital.model.*;
-
-import java.util.Optional;
 import java.util.Scanner;
+
+import br.com.desafio_banco_digital.model.Banco;
+import br.com.desafio_banco_digital.model.Cliente;
+import br.com.desafio_banco_digital.model.Conta;
+import br.com.desafio_banco_digital.model.ContaCorrente;
+import br.com.desafio_banco_digital.model.ContaPoupanca;
 
 public class Main {
 

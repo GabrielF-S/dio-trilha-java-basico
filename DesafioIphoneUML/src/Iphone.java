@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class Iphone implements AparelhoTelefonico, NavegadorInternet, ReprodutorMusica {
@@ -6,7 +8,7 @@ public class Iphone implements AparelhoTelefonico, NavegadorInternet, Reprodutor
     private boolean estaReproduzindo;
     private String musicaAtual = "";
     private String siteAtual = "";
-    private List sitesAbertos = new ArrayList<>();
+    private List<String> sitesAbertos = new ArrayList<>();
 
     @Override
     public void toca() {
