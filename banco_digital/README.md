@@ -22,16 +22,7 @@ classDiagram
     IConta: +exibirInformacoes()
     IConta: +deastivarConta()
 
-    AparelhoTelefonico <|--iPhone
-    AparelhoTelefonico: +ligar(numero)
-    AparelhoTelefonico: +atender()
-    AparelhoTelefonico: +iniciarCorreioVoz()
-    
-    NavegadorInternet <|--iPhone
-    NavegadorInternet: +exibirPagina(url)
-    NavegadorInternet:+adicionarNovaAba()
-    NavegadorInternet: +atualizarPagina()
-  
+ 
 
     class Conta {
        #int SEQUENCIAL
@@ -66,4 +57,5 @@ classDiagram
         -String cpf
         -List<Contas> contas
     }
-    
+     Conta --o Cliente
+     Banco --* Cliente
