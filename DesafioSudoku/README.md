@@ -8,5 +8,6 @@
 
 ## Criar um joog Sudoku em Java
 
-[versão com Interface Gráfica]()
-[Versão do Terminal]()
+[versão com Interface Gráfica](https://github.com/GabrielF-S/dio-trilha-java-basico/tree/main/DesafioSudokuIG)
+
+[Versão do Terminal](https://github.com/GabrielF-S/dio-trilha-java-basico/tree/main/DesafioSudoku)
