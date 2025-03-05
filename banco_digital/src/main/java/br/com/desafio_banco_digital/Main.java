@@ -91,7 +91,7 @@ public class Main {
 
         do {
             System.out.println("Selecione uma opção: ");
-            System.out.println("1 - Saque\n2 - Deposito\n3 - Consultar Saldo\n4 - Transferencia\n5 - Desativar Conta");
+            System.out.println("1 - Saque\n2 - Deposito\n3 - Consultar Saldo\n4 - Transferencia\n5 - Desativar Conta\n7- sair");
 
             opcao = input.nextInt();
 
