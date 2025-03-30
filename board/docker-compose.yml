@@ -1,0 +1,39 @@
+version: '3.1'
+
+volumes:
+  mysql-volume:
+    driver: local
+
+networks:
+  rede:
+
+services:
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: board
+      MYSQL_USER: usergabs
+      MYSQL_PASSWORD: password
+      TZ: "America/Sao_Paulo"
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-volume:/var/lib/mysql
+    networks:
+      - rede
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      PMA_USER: admin
+      PMA_PASSWORD: password
+      PMA_ARBITRARY: 1
+      PMA_HOST: board
+    networks:
+      - rede
